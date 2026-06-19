@@ -12,12 +12,21 @@ export default function MemoryTile({ memory }: { memory: MemoryItem }) {
             ref={videoRef}
             src={memory.src}
             poster={memory.poster}
-            muted
             loop
             playsInline
             preload="metadata"
-            onMouseEnter={() => videoRef.current?.play().catch(() => {})}
-            onMouseLeave={() => videoRef.current?.pause()}
+            onMouseEnter={() => {
+  const v = videoRef.current;
+  if (!v) return;
+  v.muted = false;
+  v.play().catch(() => {});
+}}
+           onMouseLeave={() => {
+  const v = videoRef.current;
+  if (!v) return;
+  v.pause();
+  v.muted = true;
+}}
             onClick={() => {
               const v = videoRef.current;
               if (!v) return;
