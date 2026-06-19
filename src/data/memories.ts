@@ -16,7 +16,7 @@ export const memories: MemoryItem[] = [
   {
     id: "1",
     type: "video",
-    src: "/src/assets/memories/mem1.mp4",
+    src: "src\assets\memories\mem1.mp4",
     poster: "/src/assets/memories/mem1-poster.jpg",
     alt: "mem1",
     autoVertical: true,
