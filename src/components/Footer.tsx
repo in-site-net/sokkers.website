@@ -17,7 +17,7 @@ export default function Footer({ signoff }: { signoff?: string }) {
         >
           <Music2 className="h-5 w-5 transition-transform group-hover:rotate-12" />
           <span className="font-medium">
-            Mudhal Nee Mudivum Nee
+            Our Song!
           </span>
         </Link>
       </div>
